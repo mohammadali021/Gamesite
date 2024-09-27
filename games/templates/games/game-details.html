@@ -1,0 +1,85 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="card text-bg-dark">
+        <img src="{% static 'games/img/header.jpg' %}" class="card-img" alt="..."
+             style="height: 400px; margin-top:55px">
+    </div>
+    <div class="container">
+        <center>
+            <p align="justify" style="color: cornsilk;margin-top: 40px;margin-bottom: 40px">
+                {{ Game.long_description }}
+            </p>
+        </center>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide container" style="width: 960px;margin-bottom: 40px">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ Game.image1.url }}" class="d-block w-100" alt="..."
+                     style="border-radius: 20px; height: 360px">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ Game.image2.url }}" class="d-block w-100" alt="..."
+                     style="border-radius: 20px; height: 360px">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ Game.image3.url }}" class="d-block w-100" alt="..."
+                     style="border-radius: 20px; height: 360px">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="container" style="color: cornsilk;margin-bottom: 20px">
+        <div class="row">
+            <div class="col-sm" style="background-color: #999E04;border-radius: 10px">
+                <b>مشخصات</b>
+            </div>
+            <table class="table table-striped">
+
+                <tr style="color: cornsilk">
+
+                    <td style="color: cornsilk"><i class="bi bi-gear"> فرمت:ISO </i></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+
+                    <td style="color: cornsilk">
+                        <i class="bi bi-folder2-open"> حجم:{{ Game.file_size }} گیگابایت </i>
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                    <button type="button" class="btn btn-success"><a href="{{Game.link_file}}" style="text-decoration: none;color: cornsilk">دانلود</a></button>
+
+                    </td>
+                    <td></td>
+
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
+

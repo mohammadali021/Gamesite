@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-lg  fixed-top" style="background-color: #999E04;opacity: 0.93">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="{% url 'home' %}" style="font-family: 'Copperplate Gothic Light'"><b>Phontom-Games</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'home' %}">خانه</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'about_us' %}">درباره ما</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'about_school' %}">درباره مدرسه</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
